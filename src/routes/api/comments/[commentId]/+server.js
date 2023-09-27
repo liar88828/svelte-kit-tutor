@@ -19,3 +19,21 @@ export async function PATCH ( requestEvent )
   return json( comment )
 }
 
+export async function DELETE ( requestEvent ) 
+{
+  const { params } = requestEvent
+  const { commentId } = params
+  // const deletes = comments.filter( c => c.id !== parseInt( commentId ) )
+  // ----
+  const deleteComment = comments.find( c => c.id === parseInt( commentId ) )
+  const index = comments.findIndex( c => c.id === parseInt( commentId ) )
+  console.log();
+  comments.splice( index, 1 )
+  return json( deleteComment )
+
+  // --------
+  // const id = comments.findIndex( c => c.id === parseInt( commentId ) )
+  // console.log( id );
+  // delete comments[ id ]
+  // return json( comments )
+}

@@ -26,3 +26,6 @@ Content-Type: application/json
 {
   "text":"text is updated"
 }
+###
+DELETE  http://[::1]:5173/api/comments/12
+Content-Type: application/json
