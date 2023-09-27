@@ -14,3 +14,7 @@ Content-Type: application/json
 {
   "text":"test sen data from client"
 }
+
+###
+GET http://[::1]:5173/api/comments/10
+Content-Type: application/json

@@ -24,3 +24,4 @@ export async function POST ( requestEvent )
   comments.push( newComment )
   return json( comments, { status: 201 } );
 }
+
