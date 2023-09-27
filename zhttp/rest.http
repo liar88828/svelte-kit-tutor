@@ -1,7 +1,16 @@
+### 
+GET http://[::1]:5173/api/demo-api
+Content-Type: application/json
+
+###
 GET http://[::1]:5173/api/comments
 Content-Type: application/json
 
 
 ### 
-GET http://[::1]:5173/api/demo-api
+POST http://[::1]:5173/api/comments
 Content-Type: application/json
+
+{
+  "text":"test sen data from client"
+}
