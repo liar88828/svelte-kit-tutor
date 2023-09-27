@@ -18,3 +18,11 @@ Content-Type: application/json
 ###
 GET http://[::1]:5173/api/comments/10
 Content-Type: application/json
+
+###
+PATCH http://[::1]:5173/api/comments/10
+Content-Type: application/json
+
+{
+  "text":"text is updated"
+}
