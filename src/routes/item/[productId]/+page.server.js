@@ -15,7 +15,6 @@ export const load = async ( serverLoadEvent ) =>
   }
   const res = await fetch( `http://localhost:3000/items/${ productId }` )
   const items = await res.json()
-  console.log( items );
   const title = "List of available Items data"
   return {
     title,
