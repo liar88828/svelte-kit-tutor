@@ -1,15 +1,21 @@
- <script>
-  export let data
- </script>
+<script>
+	import { invalidate, invalidateAll } from "$app/navigation";
+	export let data;
+	function refresh() {
+		// tanpa depends di +page.js
+		// invalidate("http://localhost:3000/stocks");
+		//---
+		// dengan depends di +page.js
+		// invalidate("stocks:actively-trading");
+		//---
+    // validate all 
+		invalidateAll();
+	}
+</script>
 
- <span>Most active stock - {data.mostActive.symbol}</span>
- <span>Most gaining stock - {data.topGaining.symbol}</span>
- <span>Most losing stock - {data.topLosing.symbol}</span>
+<h1>Active trending stocks</h1>
 
-
- <style>
-  span{
-    margin-right: 2rem;
-    font-size: 2rem;
-  }
- </style>
+{#each data.stocks as stock}
+	<h2>{stock.symbol} = ${stock.price}</h2>
+{/each}
+<button on:click={refresh}>Refresh</button>
