@@ -20,6 +20,8 @@
 <h1>welcome home</h1>
 <a href="/blog">Blog</a>
 <a href="/products">Products</a>
-<a href="/item">Item</a>
+<!-- <a href="/item" data-sveltekit-preload-data="hover">Item</a> -->
+<!-- <a href="/item" data-sveltekit-preload-data="tab">Item</a> -->
+<a href="/item" data-sveltekit-preload-data="off">Item</a>
 
 <button on:click={handleClick}>Place order</button>
