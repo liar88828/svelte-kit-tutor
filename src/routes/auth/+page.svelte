@@ -25,7 +25,11 @@
 	<!-- <input type="text" name="username" placeholder="Username" bind:value={username} /> 
 	<input type="password" name="password" placeholder="Password" bind:value={password} />  -->
 	<!--  -->
-	<input type="text" name="username" placeholder="Username" />
+	<!-- value will save a when error -->
+	<input type="text" name="username" placeholder="Username" 
+	 value={form?.username ?? ""} 
+	 
+	/>
 	<input type="password" name="password" placeholder="Password" />
 	<button type="submit">Login</button>
 	<button formaction="?/register">Register</button>

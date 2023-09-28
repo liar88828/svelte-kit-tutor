@@ -1,4 +1,4 @@
-import { json } from "@sveltejs/kit"
+import { fail } from "@sveltejs/kit"
 
 export const actions = {
   login: async ( { request, cookies } ) =>
@@ -9,9 +9,13 @@ export const actions = {
 
     if ( !username || !password )
     {
-      return json( {
-        message: "Missing username and password"
+      return fail( 400, {
+        username,
+        message: "Invalid username or password"
       } )
+      // return json( {
+      //   message: "Missing username and password"
+      // } )
     }
     cookies.set( "username", username, { path: "/" } )
     return { message: "logged in" }
@@ -25,9 +29,13 @@ export const actions = {
 
     if ( !username || !password )
     {
-      return json( {
-        message: "Missing username and password"
+      return fail( 400, {
+        username,
+        message: "Invalid username or password"
       } )
+      // return json( {
+      //   message: "Missing username and password"
+      // } )
     }
     cookies.set( "register", username, { path: "/" } )
     return { message: "Success Register..." }

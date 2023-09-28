@@ -1,5 +1,6 @@
 <script>
 	export let form;
+  console.log(form);
 </script>
 
 <form method="post" action="/auth?/login">
