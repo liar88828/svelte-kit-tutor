@@ -11,14 +11,18 @@ export const load = async ( serverLoadEvent ) =>
     //   message: `Product is not found`,
     //   hint: "try a different product"
     // } )
+
     throw redirect( 307, "/item" )
   }
   const res = await fetch( `http://localhost:3000/items/${ productId }` )
   const items = await res.json()
   const title = "List of available Items data"
+  const notification = "End od session sale 50% off!"
+
   return {
     title,
-    items
+    items,
+    notification
     // Component: Item // cannot be rendered
   }
 }
