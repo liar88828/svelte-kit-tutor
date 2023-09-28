@@ -21,7 +21,7 @@
 <a href="/blog">Blog</a>
 <a href="/products">Products</a>
 <!-- <a href="/item" data-sveltekit-preload-code="hover">Item</a> -->
-<a href="/item" data-sveltekit-preload-code="viewport">Item</a>
+<a href="/item" data-sveltekit-scroll >Item</a>
 <!-- <a href="/item" data-sveltekit-preload-data="hover">Item</a> -->
 <!-- <a href="/item" data-sveltekit-preload-data="tab">Item</a> -->
 <!-- <a href="/item" data-sveltekit-preload-data="off">Item</a> -->
