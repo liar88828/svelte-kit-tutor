@@ -3,7 +3,9 @@
 </script>
 
 <div>
-	<p>{item.title}</p>
+	<a href={`/item/${this.id}`}>
+		<p>{item.title}</p>
+	</a>
 	<p>{item.description}</p>
 	<hr />
 </div>
