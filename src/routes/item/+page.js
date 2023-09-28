@@ -2,7 +2,9 @@ import Item from "./Item.svelte";
 
 export const load = async ( loadEvent ) =>
 {
-  const { fetch, data } = loadEvent
+  console.log( "load function called in page.js" );
+
+  const { data } = loadEvent
   // const res = await fetch( "http://localhost:3000/items" )
   // const items = await res.json()
   // const title = "List of available Items data"
@@ -15,3 +17,7 @@ export const load = async ( loadEvent ) =>
     notification
   }
 }
+
+
+export const ssr = true
+export const csr = true
