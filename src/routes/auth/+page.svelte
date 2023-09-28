@@ -1,5 +1,6 @@
 <script>
 	import { page } from "$app/stores";
+	import { enhance } from "$app/forms";
 	// ------- for +server.js
 	// let username = "";
 	// let password = "";
@@ -22,7 +23,7 @@
 
 <!-- for +server.js -->
 <!-- <form on:submit|preventDefault={handlerSubmit}> -->
-<form method="post" action={`?/login&redirectTo=${redirectTo}`}>
+<form method="post" action={`?/login&redirectTo=${redirectTo}`} use:enhance>
 	<p>{form?.message || ""}</p>
 	<!--  ------- for +server.js -->
 	<!-- <input type="text" name="username" placeholder="Username" bind:value={username} /> 
