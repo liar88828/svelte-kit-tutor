@@ -26,3 +26,4 @@ export const load = async ( serverLoadEvent ) =>
     // Component: Item // cannot be rendered
   }
 }
+export const prerender = "auto"
